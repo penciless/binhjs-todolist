@@ -3,7 +3,7 @@ var { http, state } = Binh;
 var todos = state.as('todos');
 
 todos.schema(function(resolve) {
-    new http('/todos/get')
+    new http('http://localhost:1301/todos/get')
         .get(function(response) {
             resolve(parseResponse(response));
         });
@@ -25,13 +25,13 @@ function parseResponse(response) {
 }
 
 this.define('add', function(value) {
-    new http('/todos/add')
+    new http('http://localhost:1301/todos/add')
         .body({ text: value })
         .post(handleResponse);
 });
 
 this.define('remove', function(id) {
-    new http('/todos/remove')
+    new http('http://localhost:1301/todos/remove')
         .body({ id: id })
         .post(handleResponse);
 });
