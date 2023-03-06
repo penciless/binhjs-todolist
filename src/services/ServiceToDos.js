@@ -3,7 +3,7 @@ var { http, state } = Binh;
 var todos = state.as('todos');
 
 todos.schema(function(resolve) {
-    new http('http://localhost:1301/todos/get')
+    new http(api('get'))
         .get(function(response) {
             resolve(parseResponse(response));
         });
@@ -25,13 +25,17 @@ function parseResponse(response) {
 }
 
 this.define('add', function(value) {
-    new http('http://localhost:1301/todos/add')
+    new http(api('add'))
         .body({ text: value })
         .post(handleResponse);
 });
 
 this.define('remove', function(id) {
-    new http('http://localhost:1301/todos/remove')
+    new http(api('remove'))
         .body({ id: id })
         .post(handleResponse);
 });
+
+function api(relative_url) {
+    return 'https://todolist-of-binh.fly.dev/todos/' + relative_url;
+}
