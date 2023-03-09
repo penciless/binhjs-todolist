@@ -1,7 +1,8 @@
 
 var { Router } = Binh;
 var { div, nav, ul, li, a } = Binh.elements;
-var { Link } = this.component('Link');
+// var { Link } = this.component('Link');
+var { Link } = this.component('/components/', ['Link']);
 
 var PageHeader = div({ id: 'page-header' });
 

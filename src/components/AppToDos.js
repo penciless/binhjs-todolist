@@ -1,7 +1,8 @@
-this.component('PageHeader', 'ToDoItem', 'InputText');
+// this.component('PageHeader', 'ToDoItem', 'InputText');
+
 this.service('ServiceToDos');
 
-var { PageHeader, ToDoItem, InputText, ServiceToDos } = Binh.components;
+var { PageHeader, ToDoItem, InputText, ServiceToDos } = this.component('/components/', ['PageHeader', 'ToDoItem', 'InputText']);;
 var { ServiceToDos } = Binh.services;
 var { div, span } = Binh.elements;
 

@@ -20,6 +20,18 @@ Binh.settings.saveComponentRequirements = function() {
 };
 
 Binh({
-    '': 'AppMainLayout',
-    '/todos': 'AppToDos'
+    '':         ['/components/', 'AppMainLayout'],
+    '/todos':   ['/components/', 'AppToDos']
 });
+
+// Binh({
+//     '':         Binh.requires('/components/', 'AppMainLayout'),
+//     '/todos':   Binh.requires('/components/', 'AppToDos')
+// });
+
+
+
+// Binh({
+//     '':         '/component/AppMainLayout',
+//     '/todos':   '/component/AppToDos'
+// });
