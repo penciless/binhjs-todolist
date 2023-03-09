@@ -1,5 +1,5 @@
 
-var { PageHeader, PageContent } = this.component('/components/', ['PageHeader', 'PageContent']);
+var { PageHeader, PageContent } = this.component(APP_COMPONENTS, ['PageHeader', 'PageContent']);
 var { div } = Binh.elements;
 
 

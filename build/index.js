@@ -19,9 +19,11 @@ Binh.settings.saveComponentRequirements = function() {
     // TODO
 };
 
+const APP_COMPONENTS = 'https://cdn.jsdelivr.net/gh/penciless/binhjs-todolist/build/components';
+
 Binh({
-    '':         ['/components/', 'AppMainLayout'],
-    '/todos':   ['/components/', 'AppToDos']
+    '':         [APP_COMPONENTS, 'AppMainLayout'],
+    '/todos':   [APP_COMPONENTS, 'AppToDos']
 });
 
 // Binh({

@@ -3,7 +3,7 @@ Binh.component('PageHeader', function() {
 var { Router } = Binh;
 var { div, nav, ul, li, a } = Binh.elements;
 // var { Link } = this.component('Link');
-var { Link } = this.component('/components/', ['Link']);
+var { Link } = this.component(APP_COMPONENTS, ['Link']);
 
 var PageHeader = div({ id: 'page-header' });
 

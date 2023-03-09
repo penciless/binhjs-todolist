@@ -3,7 +3,7 @@ Binh.component('AppToDos', function() {
 
 this.service('ServiceToDos');
 
-var { PageHeader, ToDoItem, InputText, ServiceToDos } = this.component('/components/', ['PageHeader', 'ToDoItem', 'InputText']);;
+var { PageHeader, ToDoItem, InputText, ServiceToDos } = this.component(APP_COMPONENTS, ['PageHeader', 'ToDoItem', 'InputText']);;
 var { ServiceToDos } = Binh.services;
 var { div, span } = Binh.elements;
 
