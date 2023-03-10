@@ -1,10 +1,11 @@
 Binh.component('AppToDos', function() {
 // this.component('PageHeader', 'ToDoItem', 'InputText');
 
-this.service('ServiceToDos');
+// this.service('ServiceToDos');
 
-var { PageHeader, ToDoItem, InputText, ServiceToDos } = this.component(APP_COMPONENTS, ['PageHeader', 'ToDoItem', 'InputText']);;
-var { ServiceToDos } = Binh.services;
+var { PageHeader, ToDoItem, InputText } = this.component(APP_COMPONENTS, ['PageHeader', 'ToDoItem', 'InputText']);
+var { ServiceToDos } = this.service(APP_SERVICES, ['ServiceToDos']);
+// var { ServiceToDos } = Binh.services;
 var { div, span } = Binh.elements;
 
 var inputbox = InputText().when('submit', ServiceToDos.does('add'));
