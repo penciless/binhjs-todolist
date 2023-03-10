@@ -19,6 +19,18 @@ Binh.settings.saveComponentRequirements = function() {
     // TODO
 };
 
+Binh.ScriptLoader.pattern('https://cdn.jsdelivr.net/', function(source_url, component_names) {
+    var parts = [],
+        path = source_url.split('https://cdn.jsdelivr.net/')[1];
+
+    component_names.forEach(function(component_name) {
+        parts.push(path + '/' + component_name + '.js');
+    });
+
+    return 'https://cdn.jsdelivr.net/combine/' + parts.join(',');
+});
+
+// const APP_COMPONENTS = '/components';
 const APP_COMPONENTS = 'https://cdn.jsdelivr.net/gh/penciless/binhjs-todolist/build/components';
 
 Binh({
