@@ -1,6 +1,7 @@
 const { src, dest } = require('gulp');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
+const uglifycss = require('gulp-uglifycss');
 const modifyFile = require('gulp-modify-file');
 
 const path = require('path');
@@ -19,6 +20,11 @@ fs.rm('build', { recursive: true }, function() {
     .pipe(dest('build/'))
     .pipe(uglify())
     .pipe(rename({ extname: '.min.js' }))
+    .pipe(dest('build/'));
+
+    // Build CSS styles
+    src('src/**/*.css')
+    .pipe(uglifycss())
     .pipe(dest('build/'));
 
     // Build for UI components

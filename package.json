@@ -21,6 +21,7 @@
     "gulp-modify-file": "^1.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0",
     "nodemon": "^2.0.20"
   },
   "engines": {
